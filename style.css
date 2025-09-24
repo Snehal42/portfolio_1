@@ -16,32 +16,34 @@ body{
     display: grid;
     max-width: 1200px;
     grid-template-columns: 350px 1fr;
-    padding: 40px;
+    padding-top: 40px;
     gap : 50px;
     margin: auto;
-    grid-template-columns : repeat(auto-fit , minmax(120px , 1fr));
 }
 
 
 .side-bar{
-    height: auto;
+    height: 90dvh;
     padding: 40px;
     background-color: #201e36;
     background-color: transparent;
     backdrop-filter: blur(10px);
     border: 1px solid #3a3a3a;
     box-shadow: inset 0px 0px 15px 2px black;
-    
+    border-radius: 16px;
+    position: sticky;
+    top : 40px;
 }
 
 .main-content{
-    height: auto;
+    /* height: auto; */
     background-color: #201e36;
     background-color: transparent;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(50px);
     border: 1px solid #3a3a3a;
     padding: 40px;
     box-shadow:  0px 0px 15px 2px black;
+    border-radius: 16px;
 }
 
 .profile {
@@ -115,7 +117,7 @@ body{
 
 /* navigation */
 #navigation{
-    padding: 30px 20px;
+    
     border-bottom : 2px solid #3a3a3a;
     margin-bottom: 20px;
     padding-bottom: 20px;
@@ -124,7 +126,7 @@ body{
 nav{
     display: flex;
     justify-content: flex-end;
-    gap:3rem;
+    gap:20px;
 }
 
 nav a{
@@ -166,12 +168,14 @@ nav a{
     display: grid;
     grid-template-columns : repeat(auto-fit , minmax(120px , 1fr));
     gap:30px;
+    margin-bottom: 30px;
 }
 
 .item img{
     height: 48px;
     width: 48px;
     filter: invert(75%);
+    margin-bottom: 15 px;
 }
 .item{
     padding: 20px;
@@ -218,29 +222,104 @@ nav a{
 
 }
 .edfirst{
+    
+    border-bottom: 2px solid #3a3a3a;
+    padding-bottom:20px;
     margin-bottom: 30px;
 }
-.Ocircle{
-    height: 16px;
-    width: 16px;
-    border-radius: 50%;
-    background-color: #FFCC00;
-    padding: 3px;
-}
+
 
 
 /* Portfolio */
 .project-container{
-    display:grid;
-    grid-template-columns: 1fr ,1fr;
+    margin-top: 100px;
+    margin-top:30px;
+    display: grid;
+    grid-template-columns : repeat(auto-fit , minmax(120px , 1fr));
     gap:25px;
+    margin-bottom: 30px;
+}
+.project {
+    border-radius: 12px;
+    border: 1px solid #3a3a3a;
+    overflow: hidden;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.project img{
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    filter: brightness(0.7) contrast(1.2) saturate(0.9);
+    
+}
+.project:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.3);
+}
+.card{
+    padding: 20px;
+
 }
 
-.project img{
-    height: 200px;
-    width: 200px;
-    aspect-ratio: 1/1;
+.card h3{
+    color: #e0e0e0;
+    margin-bottom: 10px;
 }
+
+.card p{
+    color: #a0a0a0;
+    line-height: 1.6;
+    margin-bottom: 15px;
+} 
+.card span{
+    background-color: rgba(255, 191, 0, 0.1);
+    color: #FFBF00;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    margin-right: 5px;
+}
+.card span a{
+    text-decoration: none;
+    color: #FFBF00;
+    
+    padding: 6px 9px;
+    
+}
+
+
+
+@media screen and (max-width:1200px) {
+    .main-container{
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .sidebar{
+        position: static;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:750px) {
+    .project-container{
+        grid-template-columns: 1fr;
+    }
+
+    #navigation nav {
+        /* Adjust nav for smaller screens */
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .sidebar{
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+    }
+}
+
 
 
 
@@ -299,9 +378,9 @@ nav{
 }
 
 @media screen and (max-width:750px) {
-    /* .project-container{
+    .project-container{
         grid-template-columns: 1fr;
-    } */
+    }
 
     #navigation nav {
         /* Adjust nav for smaller screens */
@@ -317,9 +396,9 @@ nav{
 }
 
 @media screen and (max-width:400px) {
-    /* .project-container{
+    .project-container{
         grid-template-columns: 1fr;
-    } */
+    }
 
     #navigation nav {
         /* Adjust nav for smaller screens */
