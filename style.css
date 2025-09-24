@@ -233,6 +233,13 @@ nav a{
 .project-container{
     display:grid;
     grid-template-columns: 1fr ,1fr;
+    gap:25px;
+}
+
+.project img{
+    height: 200px;
+    width: 200px;
+    aspect-ratio: 1/1;
 }
 
 
