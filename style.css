@@ -287,6 +287,40 @@ nav a{
     padding: 6px 9px;
     
 }
+.ct{
+    text-align: center;
+    padding: auto;
+}
+.certificate-container{
+    margin-top: 100px;
+    margin-top:30px;
+    display: grid;
+    grid-template-columns : repeat(auto-fit , minmax(120px , 1fr));
+    margin-bottom: 30px;
+}
+.ct img{
+    height: 200px;
+    margin: 25px;
+    aspect-ratio: 1/1;  
+    padding: auto;              
+    border-radius: 12px;             
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+    filter: brightness(0.7) contrast(1.2) saturate(0.9);
+    overflow: hidden;                
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+
+}
+
+
+
+
+
+/* Hover effect */
+.ct img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
 
 
 
