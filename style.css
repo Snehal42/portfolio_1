@@ -5,9 +5,9 @@
 }
 
 body{
-    background-color: #040324;
+    background-color: rgb(226, 226, 237);
     font-family: sans-serif;
-    color: #a0a0a0;
+    color: #181515;
     line-height: 1.6rem;
     box-shadow: inset 0px 0px 15px 2px black;
 }
@@ -29,7 +29,7 @@ body{
     background-color: transparent;
     backdrop-filter: blur(10px);
     border: 1px solid #3a3a3a;
-    box-shadow: inset 0px 0px 15px 2px black;
+    box-shadow:  0px 0px 15px 2px rgb(165, 168, 196);
     border-radius: 16px;
     position: sticky;
     top : 40px;
@@ -42,7 +42,7 @@ body{
     backdrop-filter: blur(50px);
     border: 1px solid #3a3a3a;
     padding: 40px;
-    box-shadow:  0px 0px 15px 2px black;
+    box-shadow:  0px 0px 15px 2px rgb(165, 168, 196);
     border-radius: 16px;
 }
 
@@ -55,7 +55,7 @@ body{
     font-size: 1.5rem;
     font-weight: 700;
     margin-top: 20px;
-    color: #e0e0e0;
+    color: #181717;
 }
 
 .profile img{
@@ -68,13 +68,13 @@ body{
 .profile p{
     
     padding: 5px 15px;
-    color: #FFCC00;
+    color: #635c44;
     border : 1px solid #3a3a3a;
     font-size : 0.8rem;
     border-radius: 8px;
     display : inline-block;
     margin-top: 10px;
-    box-shadow:  0px 0px 15px 2px black;
+    box-shadow:  0px 0px 15px 2px rgb(209, 194, 232);
 }
 .contact{
     margin-top: 30px;
@@ -84,10 +84,10 @@ body{
 .lable{
     font-weight:500;
     font-size: 0.8rem;
-    color: #a0a0a0;
+    color: #181515;
 }
 .value{
-    color: #e0e0e0;
+    color: #232121;
     text-decoration: none;
 }
 .email , .phone{
@@ -131,19 +131,20 @@ nav{
 
 nav a{
     text-decoration: none;
-    color: #a0a0a0;
+    color: #141313;
     font-weight:500;
     transition: color 0.3s ease;
     
 
 }
 .active , nav a:hover{
-    color:#FFCC00;
+    color:#998843;
+    shadow:  0px 0px 15px 2px rgb(146, 146, 109);
 }
 
 /* About me */
 .heading{
-    color: #e0e0e0;
+    color: #1c1a1a;
     font-size: 2rem;
     margin-bottom: 15px;
 }
@@ -153,11 +154,11 @@ nav a{
     background-color: #FFCC00;;
     margin-bottom: 15px;
     border-radius: 3px;
-    box-shadow:  0px 0px 15px 2px black;
+    box-shadow:  0px 0px 15px 2px rgb(146, 146, 109);
 }
 .content{
     text-align: justify;
-    color: #a0a0a0;
+    color: #141313;
 }
 
 #about{
@@ -203,22 +204,22 @@ nav a{
 }
 .year{
     font-size: 0.9rem;
-    color: #a0a0a0a0;
+    color: #151414a0;
     margin-bottom: 5px;
 }
 .degree{
-    color:#e0e0e0;
+    color:#141313;
     font-size: 1.2rem;
     font-weight: 500;
     margin-bottom: 5px;
 }
 .college{
     font-style: italic;
-    color: #a0a0a0;
+    color: #181717;
     margin-bottom: 10px;
 }
 .work{
-    color: #a0a0a0;
+    color: #1a1818;
 
 }
 .edfirst{
@@ -263,26 +264,27 @@ nav a{
 }
 
 .card h3{
-    color: #e0e0e0;
+    color: #171616;
     margin-bottom: 10px;
 }
 
 .card p{
-    color: #a0a0a0;
+    color: #121111;
     line-height: 1.6;
     margin-bottom: 15px;
 } 
 .card span{
     background-color: rgba(255, 191, 0, 0.1);
-    color: #FFBF00;
+    color: #c9b476;
     padding: 4px 8px;
     border-radius: 5px;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     margin-right: 5px;
+    border: 1px solid rgb(195, 195, 113);
 }
 .card span a{
     text-decoration: none;
-    color: #FFBF00;
+    color: #383426;
     
     padding: 6px 9px;
     
@@ -292,6 +294,7 @@ nav a{
     padding: auto;
 }
 .certificate-container{
+    position: relative;
     margin-top: 100px;
     margin-top:30px;
     display: grid;
@@ -310,6 +313,33 @@ nav a{
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 
+}
+.ct{
+    position: relative;
+    text-align: center;
+}
+
+.certificate-container .preview{
+    display : none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    inset:0;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.certificate-container .preview img{
+    max-width: 90%;   
+    max-height: 90%;  
+    border-radius: 12px;
+    object-fit: contain;
+    transition: transform 0.5s ease;  
+    transform: scale(1);  
 }
 
 
